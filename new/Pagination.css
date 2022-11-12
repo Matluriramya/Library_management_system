@@ -1,0 +1,133 @@
+:root{
+    --up_arrow_color: #ffffff;
+    --up_arrow_shadow: 0px 0px 10px, white;
+
+    --down_arrow_color: #ffffff49;
+    --down_arrow_shadow: 0px 0px 0px, rgba(255, 255, 255, 0);
+}
+
+body{
+    background-color: black;
+    color: white;
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 20px 50px;
+}
+
+container{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th{
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 10px;
+    border: 0.5px solid #585858;
+    letter-spacing: 2px ;
+}
+
+th{
+    font-size: 21px;
+    background-color: #696969;
+}
+
+td{
+    font-size: 19px;
+    background-color: #a3a0a0;
+}
+
+tr:hover td{
+    background-color: #868484;
+}
+
+.footer{
+    margin-top: 25px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    padding: 7px 15px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button.active, button:hover{
+    background: linear-gradient(to bottom, #9c9c9c 0%, #111 100%);
+}
+
+.tab_head_container{
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page_limit{
+    font-size: 20px;
+}
+
+.page_limit select{
+    font-size: 16px;
+    color: white;
+    padding: 5px;
+    background: linear-gradient(to bottom, #9c9c9c 0%,#111 100%);
+}
+
+.page_limit option{
+    background: rgb(58,58,58);
+}
+
+#tab_filter_text{
+    height: 25px;
+    width: 200px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+#tab_filter_btn{
+    font-size: 16px;
+    letter-spacing: 1px;
+
+}
+
+th{
+    position: relative;
+
+}
+
+th.sort_indication::after{
+    position: absolute;
+    content: '\25b2';
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--up_arrow_color);
+    text-shadow: var(--up_arrow_shadow);
+    right: 5px;
+}
+
+th.sort_indication::before{
+    position: absolute;
+    content: '\25bc';
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--down_arrow_color);
+    text-shadow: var(--down_arrow_shadow);
+    right: 5px;
+    margin-top: 14px;
+}

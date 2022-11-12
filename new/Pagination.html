@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <link rel="stylesheet" href="Pagination.css">
+</head>
+<body>
+
+    <!--<body background="https://img.freepik.com/premium-vector/blank-light-grey-blurred-background-with-radial-gradient_53562-6788.jpg?w=2000"style="background-repeat:no-repeat;background-size:100% 100%;>-->
+        <div class="container"> 
+            <div class="tab_head_container">
+                <div class="page_limit">
+                    <span>Shows </span>
+                    <select id="table_size">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                    </select>
+                    <span>entries</span>
+                </div>
+                <div class="tab_filter_container">
+                    <input type="text" id="tab_filter_text">
+                    <button id="tab_filter_btn" class="active">Filter</button>
+                </div>
+            </div>
+    
+    
+          <!--  <hr />
+    
+            <h1 style="text-align:center;">LIBRARY MANAGEMENT SYSTEM</h1>
+            <hr />-->
+            <table id="myTable" class="table table-bordered" style="border: solid black;">
+    
+                <thead>
+                    <tr>
+                        <th colName="title">title</th>
+                        <th colName="author">author</th>
+                        <th colName="subject">subject</th>
+                        <th colName="publish date">publish date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--<tr>
+                        <td>malguadi days</td>
+                        <td>rk narayan</td>
+                        <td>theory</td>
+                        <td>2018</td>
+                    </tr>
+    
+                    <tr>
+                        <td>cindrella</td>
+                        <td>narayan</td>
+                        <td>story</td>
+                        <td>2018</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Classical Mythology</td>
+                        <td>Mark P. O. Morford</td>
+                        <td>theory</td>
+                        <td>2002</td>
+                    </tr>
+    
+    
+                    <tr>
+                        <td>Clara Callan</td>
+                        <td>Richard Bruce Wright</td>
+                        <td>story</td>
+                        <td>2001</td>
+                    </tr>
+    
+    
+                    <tr>
+                        <td>Decision in Normandy</td>
+                        <td>Carlo D'Este</td>
+                        <td>Real story</td>
+                        <td>1991</td>
+                    </tr>
+    
+    
+                    <tr>
+                        <td>The Mummies of Urumchi</td>
+                        <td>E. J. W. Barber</td>
+                        <td>thoery</td>
+                        <td>1999</td>
+                    </tr>
+    
+    
+                    <tr>
+                        <td>The Kitchen God's Wife</td>
+                        <td>Amy Tan</td>
+                        <td>thoery</td>
+                        <td>1991</td>
+                    </tr>
+    
+    
+                    <tr>
+                        <td>PLEADING GUILTY</td>
+                        <td>Scott Turow</td>
+                        <td>Crime fiction</td>
+                        <td>1993</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Nights Below Station Street</td>
+                        <td>David Adams Richards</td>
+                        <td>fiction</td>
+                        <td>1998</td>
+                    </tr>
+    
+    
+                    <tr>
+                        <td>The Middle Stories</td>
+                        <td>Sheila Heti</td>
+                        <td>story</td>
+                        <td>2004</td>
+                    </tr>
+    
+    
+                    <tr>
+                        <td>Goodbye to the Buttermilk Sky</td>
+                        <td>Julia Oliver</td>
+                        <td>Historical fiction</td>
+                        <td>1994</td>
+                    </tr>
+    
+                    <tr>
+                        <td>The Testament</td>
+                        <td>John Grisham</td>
+                        <td>thoery</td>
+                        <td>1999</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Tell Me This Isn't Happening</td>
+                        <td>Robynn Clairday</td>
+                        <td>story</td>
+                        <td>1999</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Flood : Mississippi 1927</td>
+                        <td>Kathleen Duey</td>
+                        <td>Real story</td>
+                        <td>1998</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Wild Animus</td>
+                        <td>Rich Shapero</td>
+                        <td>Adventure fiction</td>
+                        <td>2004</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Airframe</td>
+                        <td>Michael Crichton</td>
+                        <td>Thriller</td>
+                        <td>1997</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Timeline</td>
+                        <td>MICHAEL CRICHTON</td>
+                        <td>Science fiction</td>
+                        <td>2000</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>OUT OF THE SILENT PLANET</td>
+                        <td>C.S. Lewis</td>
+                        <td>thoery</td>
+                        <td>1996</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Chocolate Jesus</td>
+                        <td>Stephan Jaramillo</td>
+                        <td>funny</td>
+                        <td>1998</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>To Kill a Mockingbird</td>
+                        <td>Harper Lee</td>
+                        <td>Legal story</td>
+                        <td>1988</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Pigs in Heaven</td>
+                        <td>Barbara Kingsolver</td>
+                        <td>romance</td>
+                        <td>1993</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Miss Zukas and the Raven's Dance</td>
+                        <td>Jo Dereske</td>
+                        <td>thoery</td>
+                        <td>1996</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>I'll Be Seeing You</td>
+                        <td>Mary Higgins Clark</td>
+                        <td>Mystery</td>
+                        <td>1994</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Isle of Dogs</td>
+                        <td>Patricia Cornwell</td>
+                        <td>Fiction</td>
+                        <td>2002</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Proxies</td>
+                        <td>Laura J. Mixon</td>
+                        <td>Science fiction</td>
+                        <td>1999</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>The Street Lawyer</td>
+                        <td>JOHN GRISHAM</td>
+                        <td>Thriller</td>
+                        <td>1999</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Love, Medicine and Miracles</td>
+                        <td>M.D. Bernie S. Siegel</td>
+                        <td>story</td>
+                        <td>1988</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>All the King's Men</td>
+                        <td>Robert Penn Warren</td>
+                        <td>story</td>
+                        <td>1982</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Pacific Northwest</td>
+                        <td>Hans Johannes Hoefer</td>
+                        <td>theory</td>
+                        <td>1985</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>A Soldier of the Great War</td>
+                        <td>Mark Helprin</td>
+                        <td>Drama</td>
+                        <td>1992</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Getting Well Again</td>
+                        <td>O. Carol Simonton Md</td>
+                        <td>Story</td>
+                        <td>1992</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Northwest Wines and Wineries</td>
+                        <td>Chuck Hill</td>
+                        <td>theory</td>
+                        <td>1993</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Shabanu: Daughter of the Wind (Border Trilogy)</td>
+                        <td>SUZANNE FISHER STAPLES</td>
+                        <td>theory</td>
+                        <td>1991</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Haveli (Laurel Leaf Books)</td>
+                        <td>SUZANNE FISHER STAPLES</td>
+                        <td>theory</td>
+                        <td>1995</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Lieux dits</td>
+                        <td>Michel Tournier</td>
+                        <td>theory</td>
+                        <td>2002</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>The yawning heights</td>
+                        <td>Aleksandr Zinoviev</td>
+                        <td>fiction</td>
+                        <td>1980</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Breathing Lessons</td>
+                        <td>Anne Tyler</td>
+                        <td>Domestic fiction</td>
+                        <td>1994</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>The Joy Luck Club</td>
+                        <td>Amy Tan</td>
+                        <td>Domestic fiction</td>
+                        <td>1994</td>
+    
+                    </tr>-->
+    
+    
+    
+    
+                </tbody>
+    
+            </table>
+            <div class="footer">
+                <span>Showing 1 to 10 of 60 entries</span>
+                <div class="index_buttons"></div>
+            </div>
+        </div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="Pagination.js"></script>
+    
+
+
+</body>
+</html>
